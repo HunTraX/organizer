@@ -22,6 +22,4 @@ public class DienstPlan {
             System.out.println("Fehler: Datum passt nicht!");
         }
     }
-
-
 }
