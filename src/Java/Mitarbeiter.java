@@ -38,4 +38,8 @@ public class Mitarbeiter {
     public int getID() {
         return ID;
     }
+
+    public void debugMitarbeiter(){
+        System.out.println(this.ID + " " + this.name + " " + this.geburtsDatum.toString());
+    }
 }

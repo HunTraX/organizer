@@ -1,5 +1,8 @@
 package Java;
 
+import Java.CreaterClasses.CreateDienst;
+import Java.CreaterClasses.CreateMitarbeiter;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -12,5 +15,7 @@ public class Organizer {
         mList.add(m);
         Dienst d = new Dienst(mList, LocalDateTime.of(2019, 3, 10, 14, 0), LocalDateTime.of(2019, 3, 10, 18, 0));
         CreateDienst createD = new CreateDienst();
+
+        CreateMitarbeiter createMitarbeiter = new CreateMitarbeiter();
     }
 }
