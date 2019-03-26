@@ -9,11 +9,19 @@ import java.util.ArrayList;
 public class LoadMitarbeiter {
     public LoadMitarbeiter(ArrayList<Mitarbeiter> mList){
         try {
-        File dir = new File("C:/Organizer/Data/Mitarbeiter");
+        File dir = new File("C:/Organizer/Data/MitarbeiterData.txt");
             InputStream in = new FileInputStream(dir);
             ObjectInputStream reader = new ObjectInputStream(in);
-            Mitarbeiter m =  (Mitarbeiter) reader.readObject();
-            mList.add(m);
+            while(true){
+                Mitarbeiter m =  (Mitarbeiter) reader.readObject();
+
+                if (m != null){
+                    mList.add(m);
+                }else {
+                    break;
+                }
+            }
+
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
