@@ -6,6 +6,7 @@ import javax.swing.text.DateFormatter;
 import java.text.DateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CreateMitarbeiter {
@@ -17,7 +18,7 @@ public class CreateMitarbeiter {
     private LocalDate geburtsDatum;
 
     // TODO: Geburtsdatum erfassen
-    public CreateMitarbeiter(){
+    public CreateMitarbeiter(ArrayList<Mitarbeiter> mList){
         sc = new Scanner(System.in);
         System.out.println("Bitte geben sie ihren Nachnamen ein:");
         name = sc.nextLine();
@@ -32,6 +33,7 @@ public class CreateMitarbeiter {
 
         Mitarbeiter m1 = new Mitarbeiter(name, vorName, geburtsDatum);
         m1.debugMitarbeiter();
+        mList.add(m1);
     }
 
 

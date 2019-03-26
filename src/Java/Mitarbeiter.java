@@ -1,11 +1,12 @@
 package Java;
 
+import java.io.Serializable;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Mitarbeiter {
+public class Mitarbeiter implements Serializable {
     private static int nextID =0;
     private int ID;
     private String name;
