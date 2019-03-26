@@ -25,14 +25,13 @@ public class CreateMitarbeiter {
         System.out.println("Bitte geben sie ihren Voramen ein:");
         vorName = sc.nextLine();
         // Geburtsdatum muss nach YYYY-MM-DD angegeben werden.
-        System.out.println("Bitte geben sie ihr Geburtsdatum ein:");
+        System.out.println("Bitte geben sie ihr Geburtsdatum ein: (YYYY-MM-DD)");
         geburtsDatumAsString = sc.next();
         System.out.println(geburtsDatumAsString);
 
         geburtsDatum = LocalDate.parse(geburtsDatumAsString);
 
         Mitarbeiter m1 = new Mitarbeiter(name, vorName, geburtsDatum);
-        m1.debugMitarbeiter();
         mList.add(m1);
     }
 
