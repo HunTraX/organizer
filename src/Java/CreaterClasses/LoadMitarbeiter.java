@@ -3,13 +3,17 @@ package Java.CreaterClasses;
 import Java.Mitarbeiter;
 
 import java.io.*;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class LoadMitarbeiter {
-    public LoadMitarbeiter(){
+    public LoadMitarbeiter(ArrayList<Mitarbeiter> mList){
         try {
         File dir = new File("C:/Organizer/Data/Mitarbeiter");
             InputStream in = new FileInputStream(dir);
-            ObjectInputStream input = new ObjectInputStream(in);
+            ObjectInputStream reader = new ObjectInputStream(in);
+            Mitarbeiter m =  (Mitarbeiter) reader.readObject();
+            mList.add(m);
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
