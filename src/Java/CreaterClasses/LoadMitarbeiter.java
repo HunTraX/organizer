@@ -16,7 +16,8 @@ public class LoadMitarbeiter {
                 Mitarbeiter m =  (Mitarbeiter) reader.readObject();
 
                 if (m != null){
-                    mList.add(m);
+                    Mitarbeiter mNew = new Mitarbeiter(m);
+                    mList.add(mNew);
                 }else {
                     break;
                 }

@@ -22,6 +22,14 @@ public class Mitarbeiter implements Serializable {
         this.vorName = vorName;
         this.geburtsDatum = geburtsDatum;
     }
+    public Mitarbeiter(Mitarbeiter mitarbeiter){
+        ID = nextID;
+        nextID++;
+        this.name = mitarbeiter.getName();
+        this.vorName = mitarbeiter.getVorName();
+        this.geburtsDatum = mitarbeiter.geburtsDatum;
+        this.dayList = mitarbeiter.getDayList();
+    }
 
 
     public void addDayToDayList(DayOfWeek day){
@@ -42,5 +50,25 @@ public class Mitarbeiter implements Serializable {
 
     public void debugMitarbeiter(){
         System.out.println(this.ID + " " + this.name + " " + this.geburtsDatum.toString());
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getVorName() {
+        return vorName;
+    }
+
+    public LocalDate getGeburtsDatum() {
+        return geburtsDatum;
+    }
+
+    public double getStdBeschränkung() {
+        return stdBeschränkung;
+    }
+
+    public List<DayOfWeek> getDayList() {
+        return dayList;
     }
 }

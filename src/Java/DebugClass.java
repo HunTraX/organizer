@@ -16,10 +16,6 @@ public class DebugClass {
     public DebugClass() throws IOException {
         ArrayList<Mitarbeiter> mList = new ArrayList();
         LoadMitarbeiter loadMitarbeiter = new LoadMitarbeiter(mList);
-        //Mitarbeiter m = new Mitarbeiter("Patrick", "Leonhardt", LocalDate.of(1995, 4, 14));
-        //mList.add(m);
-
-        CreateMitarbeiter createMitarbeiter = new CreateMitarbeiter(mList);
         for(Mitarbeiter mitarbeiter: mList){
             mitarbeiter.debugMitarbeiter();
         }
