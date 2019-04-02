@@ -9,15 +9,16 @@ import java.util.ArrayList;
 
 public class DebugClass {
     public DebugClass() {
-        CreateMitarbeiter
+
 
         ArrayList<Mitarbeiter> mList = LoadMitarbeiter.load();
+        CreateMitarbeiter.createMitarbeiter(mList);
         for(Mitarbeiter mitarbeiter: mList){
             mitarbeiter.debugMitarbeiter();
         }
 
 
-        SaveMitarbeiter saveMitarbeiter = new SaveMitarbeiter(mList);
+        SaveMitarbeiter.saveMitarbeiter(mList);
 
     }
 }

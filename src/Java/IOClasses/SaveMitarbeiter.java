@@ -6,7 +6,11 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class SaveMitarbeiter {
-    public SaveMitarbeiter(ArrayList<Mitarbeiter> list) {
+    private SaveMitarbeiter(ArrayList<Mitarbeiter> list) {
+
+    }
+
+    public static void saveMitarbeiter(ArrayList<Mitarbeiter> list){
         try {
             File dir = new File("C:/Organizer/Data/Mitarbeiter");
             dir.mkdirs();
@@ -16,7 +20,7 @@ public class SaveMitarbeiter {
             for (Mitarbeiter m: list) {
                 writer.writeObject(m);
             }
-            }catch (Exception e){
+        }catch (Exception e){
             System.out.println(e.getMessage());
         }
     }

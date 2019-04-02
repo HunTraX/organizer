@@ -7,9 +7,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class LoadMitarbeiter {
-    private LoadMitarbeiter() {
-
-    }
+    private LoadMitarbeiter() {}
 
     public static ArrayList<Mitarbeiter> load() {
         ArrayList<Mitarbeiter> mList = new ArrayList<>();
