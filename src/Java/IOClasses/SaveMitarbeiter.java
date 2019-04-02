@@ -6,7 +6,7 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class SaveMitarbeiter {
-    public SaveMitarbeiter(ArrayList<Mitarbeiter> list)throws FileNotFoundException, IOException {
+    public SaveMitarbeiter(ArrayList<Mitarbeiter> list) {
         try {
             File dir = new File("C:/Organizer/Data/Mitarbeiter");
             dir.mkdirs();
