@@ -2,19 +2,58 @@ package Java.CreaterClasses;
 
 import Java.Mitarbeiter;
 
+import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class CreateTemplate {
+public final class CreateTemplate {
+    private final static Scanner sc = new Scanner(System.in);
+    private static DayOfWeek day;
+    private static LocalTime start;
+    private static double duration;
 
-    private CreateTemplate(ArrayList<Mitarbeiter> mList){
+    private CreateTemplate(){
 
     }
 
-    public static void createMitarbeiter(ArrayList<Mitarbeiter> liste){
-
+    public static void createTemplate(){
+        System.out.println("Geben Sie bitte die nummer eines Tags ein: ");
+        setDay();
+        System.out.println("Startzeitpunkt eingeben:");
+        sc.next();
+        System.out.println("Länge des Dienstes eingeben");
+        sc.nextDouble();
     }
-
+    private static void setDay (){
+        switch(sc.nextInt()){
+            case 1:
+                day =DayOfWeek.MONDAY;
+                break;
+            case 2:
+                day =DayOfWeek.TUESDAY;
+                break;
+            case 3:
+                day =DayOfWeek.WEDNESDAY;
+                break;
+            case 4:
+                day =DayOfWeek.THURSDAY;
+                break;
+            case 5:
+                day =DayOfWeek.FRIDAY;
+                break;
+            case 6:
+                day =DayOfWeek.SATURDAY;
+                break;
+            case 7:
+                day =DayOfWeek.MONDAY;
+                break;
+                default:
+                    System.out.println("Fehler bei Eingabe! Bitte erneut versuchen.");
+                    setDay();
+                    break;
+        }
+    }
 
 }

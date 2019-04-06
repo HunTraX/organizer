@@ -11,15 +11,14 @@ import java.util.Timer;
 
 public class DienstTemplate {
     private DayOfWeek day;
-    private List mitarbeiterListe = new ArrayList();
     private LocalTime start;
     private Double länge;
     private int mindestBelegung;
     private int optimalBelegung;
 
-    public DienstTemplate(List mitarbeiterListe, LocalTime start, Double dauer) {
-        this.mitarbeiterListe = mitarbeiterListe;
+    public DienstTemplate(LocalTime start, Double dauer, DayOfWeek day) {
         this.start = start;
+        this.day = day;
         this.länge = dauer;
     }
 
@@ -38,6 +37,4 @@ public class DienstTemplate {
     public void setOptimalBelegung(int optimalBelegung) {
         this.optimalBelegung = optimalBelegung;
     }
-
-
 }
