@@ -1,5 +1,7 @@
 package Java.CreaterClasses;
 
+import Java.DienstPlan;
+import Java.DienstTemplate;
 import Java.Mitarbeiter;
 
 import java.time.DayOfWeek;
@@ -22,9 +24,11 @@ public final class CreateTemplate {
         System.out.println("Geben Sie bitte die nummer eines Tags ein: ");
         setDay();
         System.out.println("Startzeitpunkt eingeben:");
-        sc.next();
+        start = LocalTime.parse(sc.next());
         System.out.println("Länge des Dienstes eingeben");
-        sc.nextDouble();
+        duration = sc.nextDouble();
+
+        DienstTemplate dT = new DienstTemplate(start, duration, day);
     }
     private static void setDay (){
         switch(sc.nextInt()){
