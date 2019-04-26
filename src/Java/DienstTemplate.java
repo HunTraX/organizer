@@ -22,6 +22,12 @@ public class DienstTemplate {
         this.länge = dauer;
     }
 
+    public DienstTemplate (DienstTemplate copyTemplate){
+        this.day = copyTemplate.day;
+        this.länge = copyTemplate.länge;
+        this.start = copyTemplate.start;
+    }
+
     public int getMindestBelegung() {
         return mindestBelegung;
     }
