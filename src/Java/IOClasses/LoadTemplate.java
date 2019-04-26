@@ -22,7 +22,7 @@ public class LoadTemplate {
                 DienstTemplate dT = (DienstTemplate) reader.readObject();
 
                 if (dT != null) {
-                    DienstTemplate dTNew = new DienstTemplate(dTNew);
+                    DienstTemplate dTNew = new DienstTemplate(dT);
                     dTList.add(dTNew);
                 } else {
                     break;
