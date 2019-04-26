@@ -20,7 +20,7 @@ public final class CreateTemplate {
 
     }
 
-    public static void createTemplate(){
+    public static void createTemplate(ArrayList<DienstTemplate> dienstTemplates){
         System.out.println("Geben Sie bitte die nummer eines Tags ein: ");
         setDay();
         System.out.println("Startzeitpunkt eingeben:");
@@ -29,6 +29,7 @@ public final class CreateTemplate {
         duration = sc.nextDouble();
 
         DienstTemplate dT = new DienstTemplate(start, duration, day);
+        dienstTemplates.add(dT);
     }
     private static void setDay (){
         switch(sc.nextInt()){

@@ -16,8 +16,7 @@ public class CreateMitarbeiter {
     private static String geburtsDatumAsString;
     private static double stdBeschränkung=0;
     private static LocalDate geburtsDatum;
-
-    // TODO: Geburtsdatum erfassen
+    
     private CreateMitarbeiter(ArrayList<Mitarbeiter> mList){
 
     }
