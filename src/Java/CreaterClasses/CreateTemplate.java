@@ -27,7 +27,6 @@ public final class CreateTemplate {
         start = LocalTime.parse(sc.next());
         System.out.println("Länge des Dienstes eingeben");
         duration = sc.nextDouble();
-
         DienstTemplate dT = new DienstTemplate(start, duration, day);
         dienstTemplates.add(dT);
     }
