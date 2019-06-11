@@ -43,4 +43,16 @@ public class DienstTemplate {
     public void setOptimalBelegung(int optimalBelegung) {
         this.optimalBelegung = optimalBelegung;
     }
+
+    public DayOfWeek getDay() {
+        return day;
+    }
+
+    public LocalTime getStart() {
+        return start;
+    }
+
+    public Double getLänge() {
+        return länge;
+    }
 }

@@ -2,6 +2,7 @@ package Java;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,12 +21,26 @@ public class DienstPlan {
 
     private void populateDienstList(){
         while(von.isBefore(bis) || von.isEqual(bis)){
-            von.getDayOfWeek();
-            Dienst d = new Dienst();
+            for(DienstTemplate dienstTemplate: dienstTemplateList){
+                if (von.getDayOfWeek() == dienstTemplate.getDay()){
+                    Dienst d = new Dienst(von.atTime(dienstTemplate.getStart()), getMitarbeiterForWeekday(von.getDayOfWeek()));
+                } else {
+                    continue;
+                }
+            }
+
         }
     }
 
     private List<Mitarbeiter> getMitarbeiterForWeekday (DayOfWeek day){
-        
+        List<Mitarbeiter> returnList = new ArrayList<>();
+        for(Mitarbeiter m: mitarbeiterList){
+            for(DayOfWeek d: m.getDayList()){
+                if(day == d){
+                    returnList.add(m);
+                }
+            }
+        }
+        return returnList;
     }
 }
