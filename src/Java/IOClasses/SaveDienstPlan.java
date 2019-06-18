@@ -8,7 +8,10 @@ import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 
 public class SaveDienstPlan {
-    public SaveDienstPlan(DienstPlan dienstPlan) {
+    private SaveDienstPlan() {
+    }
+
+    public static void SaveDienstPlan(DienstPlan dienstPlan) {
         try {
             File dir = new File("C:/Organizer/Data/dienstPlan");
             dir.mkdirs();

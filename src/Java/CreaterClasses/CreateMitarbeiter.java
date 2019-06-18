@@ -21,6 +21,7 @@ public class CreateMitarbeiter {
     public static void createMitarbeiter(ArrayList<Mitarbeiter> liste){
         try{
             sc = new Scanner(System.in);
+
             System.out.println("Bitte geben sie ihren Nachnamen ein:");
             name = sc.nextLine();
             System.out.println("Bitte geben sie ihren Voramen ein:");
@@ -34,8 +35,10 @@ public class CreateMitarbeiter {
 
             Mitarbeiter m1 = new Mitarbeiter(name, vorName, geburtsDatum);
             liste.add(m1);
+            System.out.println("Mitarbeiter angelegt.");
         } catch (Exception e){
             System.out.println("Fehler: " + e.getMessage());
+
         }
 
     }

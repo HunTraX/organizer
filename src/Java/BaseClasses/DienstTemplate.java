@@ -1,8 +1,9 @@
 package Java.BaseClasses;
 
+import java.io.Serializable;
 import java.time.*;
 
-public class DienstTemplate {
+public class DienstTemplate implements Serializable {
     private DayOfWeek day;
     private LocalTime start;
     private Double länge;
