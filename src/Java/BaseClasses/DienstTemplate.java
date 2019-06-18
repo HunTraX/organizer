@@ -1,13 +1,6 @@
-package Java;
+package Java.BaseClasses;
 
-import javax.xml.stream.events.StartElement;
-import java.nio.channels.NonReadableChannelException;
-import java.sql.Time;
 import java.time.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Timer;
 
 public class DienstTemplate {
     private DayOfWeek day;

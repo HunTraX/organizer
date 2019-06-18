@@ -1,7 +1,6 @@
 package Java.IOClasses;
 
-import Java.DienstPlan;
-import Java.DienstTemplate;
+import Java.BaseClasses.DienstPlan;
 
 import java.io.File;
 import java.io.FileOutputStream;

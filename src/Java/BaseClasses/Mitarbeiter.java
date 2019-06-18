@@ -1,4 +1,4 @@
-package Java;
+package Java.BaseClasses;
 
 import java.io.Serializable;
 import java.time.DayOfWeek;

@@ -1,11 +1,10 @@
 package Java.CreaterClasses;
 
-import Java.DienstPlan;
-import Java.DienstTemplate;
-import Java.Mitarbeiter;
+import Java.BaseClasses.DienstPlan;
+import Java.BaseClasses.DienstTemplate;
+import Java.BaseClasses.Mitarbeiter;
 
 import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;

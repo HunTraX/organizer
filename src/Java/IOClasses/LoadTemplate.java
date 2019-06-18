@@ -1,7 +1,6 @@
 package Java.IOClasses;
 
-import Java.DienstTemplate;
-import Java.Mitarbeiter;
+import Java.BaseClasses.DienstTemplate;
 
 import java.io.File;
 import java.io.FileInputStream;
