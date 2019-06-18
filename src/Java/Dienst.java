@@ -14,5 +14,9 @@ public class Dienst {
         this.mitarbeiterList = mitarbeiterList;
     }
 
+    public String debugDienst(){
+        return dateTime.toString() + " -- Mitarbeiter: " + mitarbeiterList.toString();
+    }
+
 
 }

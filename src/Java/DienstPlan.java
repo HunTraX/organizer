@@ -17,6 +17,14 @@ public class DienstPlan {
         this.von = von;
         this.bis = bis;
         this.mitarbeiterList = mitarbeiterList;
+        populateDienstList();
+    }
+
+    public DienstPlan(DienstPlan dienstPlan){
+        this.von = dienstPlan.von;
+        this.bis = dienstPlan.bis;
+        this.mitarbeiterList = dienstPlan.mitarbeiterList;
+        this.dienstList = dienstPlan.dienstList;
     }
 
     private void populateDienstList(){
@@ -24,11 +32,8 @@ public class DienstPlan {
             for(DienstTemplate dienstTemplate: dienstTemplateList){
                 if (von.getDayOfWeek() == dienstTemplate.getDay()){
                     Dienst d = new Dienst(von.atTime(dienstTemplate.getStart()), getMitarbeiterForWeekday(von.getDayOfWeek()));
-                } else {
-                    continue;
                 }
             }
-
         }
     }
 

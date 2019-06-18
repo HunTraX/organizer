@@ -2,10 +2,12 @@ package Java.CreaterClasses;
 
 import Java.DienstPlan;
 import Java.DienstTemplate;
+import Java.Mitarbeiter;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class CreateDienstpläne {
@@ -16,11 +18,11 @@ public class CreateDienstpläne {
     private CreateDienstpläne(){
     }
 
-    public static void createTemplate(ArrayList<DienstTemplate> dienstTemplates){
+    public static void createTemplate(ArrayList<DienstTemplate> dienstTemplates, List<Mitarbeiter> mitarbeiterList){
         System.out.println("Startdatum eingeben:");
         start = LocalDate.parse(sc.next());
         System.out.println("Enddatum eingeben");
         ende  = LocalDate.parse(sc.next());
-        DienstPlan dienstPlan = new DienstPlan(start, ende);
+        DienstPlan dienstPlan = new DienstPlan(start, ende, mitarbeiterList);
     }
 }
