@@ -19,7 +19,6 @@ public class LoadTemplate {
             ObjectInputStream reader = new ObjectInputStream(in);
             while (true) {
                 DienstTemplate dT = (DienstTemplate) reader.readObject();
-                System.out.println("LoadTemplate Schleife");
                 if (dT != null) {
                     DienstTemplate dTNew = new DienstTemplate(dT);
                     dTList.add(dTNew);
