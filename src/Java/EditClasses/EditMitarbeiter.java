@@ -44,8 +44,8 @@ public class EditMitarbeiter {
                 return DayOfWeek.SUNDAY;
             default:
                 System.out.println("Fehler bei Eingabe! Bitte erneut versuchen.");
-                setDay();
-                break;
+                return setDay();
+
         }
     }
 }
