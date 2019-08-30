@@ -3,6 +3,7 @@ package Java.BaseClasses;
 import java.io.Serializable;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -36,6 +37,15 @@ public class Mitarbeiter implements Serializable {
         this.abwesenheitHashMap = mitarbeiter.getAbwesenheitHashMap();
     }
 
+
+    public boolean prüfeAbwesenheit(LocalDate localDate){
+        if(abwesenheitHashMap.containsKey(localDate)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 
     public void addDayToDayList(DayOfWeek day){
         if(!dayList.contains(day)){

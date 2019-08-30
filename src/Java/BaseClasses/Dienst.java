@@ -10,11 +10,19 @@ public class Dienst {
     public Dienst(LocalDateTime dateTime, List<Mitarbeiter> mitarbeiterList) {
         this.dateTime = dateTime;
         this.mitarbeiterList = mitarbeiterList;
+        checkAbwesenheit();
     }
 
     public String debugDienst(){
         return dateTime.toString() + " -- Mitarbeiter: " + mitarbeiterList.toString();
     }
 
+    private void checkAbwesenheit (){
+        for (Mitarbeiter m: mitarbeiterList){
+            if(m.prüfeAbwesenheit(dateTime.toLocalDate())){
+                mitarbeiterList.remove(m);
+            }
+        }
+    }
 
 }
