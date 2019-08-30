@@ -17,7 +17,7 @@ public class CreateDienstpläne {
     private CreateDienstpläne(){
     }
 
-    public static void createTemplate(ArrayList<DienstTemplate> dienstTemplates, List<Mitarbeiter> mitarbeiterList){
+    public static void create(ArrayList<DienstTemplate> dienstTemplates, List<Mitarbeiter> mitarbeiterList){
         System.out.println("Startdatum eingeben:");
         start = LocalDate.parse(sc.next());
         System.out.println("Enddatum eingeben");

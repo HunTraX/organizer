@@ -3,8 +3,10 @@ package Java.ProgramLoop;
 import Java.BaseClasses.DienstPlan;
 import Java.BaseClasses.DienstTemplate;
 import Java.BaseClasses.Mitarbeiter;
+import Java.CreaterClasses.CreateDienstpläne;
 import Java.CreaterClasses.CreateMitarbeiter;
 import Java.CreaterClasses.CreateTemplate;
+import Java.EditClasses.EditMitarbeiter;
 import Java.IOClasses.*;
 
 import java.util.ArrayList;
@@ -45,6 +47,7 @@ public class Main {
                     CreateTemplate.createTemplate(dienstTemplates);
                     break;
                 case "3":
+                    CreateDienstpläne.create(dienstTemplates,mitarbeiterList);
                     break;
                 case "4":
                     listeMitarbeiterAuf();
@@ -52,6 +55,7 @@ public class Main {
                 case "5":
                     listeDienstTemplatesAuf();
                     break;
+                case "6":
                 case "99":
                     SaveMitarbeiter.saveMitarbeiter(mitarbeiterList);
                     SaveTemplate.saveTemplate(dienstTemplates);

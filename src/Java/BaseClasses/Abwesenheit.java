@@ -3,12 +3,10 @@ package Java.BaseClasses;
 import java.time.LocalDate;
 
 public class Abwesenheit {
-    Mitarbeiter mitarbeiter;
     LocalDate anfang;
     LocalDate ende;
 
-    public Abwesenheit(Mitarbeiter mitarbeiter, LocalDate anfang, LocalDate ende) {
-        this.mitarbeiter = mitarbeiter;
+    public Abwesenheit(LocalDate anfang, LocalDate ende) {
         this.anfang = anfang;
         this.ende = ende;
     }

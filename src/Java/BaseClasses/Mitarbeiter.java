@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Mitarbeiter implements Serializable {
@@ -14,6 +15,8 @@ public class Mitarbeiter implements Serializable {
     private LocalDate geburtsDatum;
     private double stdBeschränkung=0;
     private List<DayOfWeek> dayList = new ArrayList<DayOfWeek>();
+    private HashMap<LocalDate, Abwesenheit> abwesenheitHashMap;
+
 
     public Mitarbeiter(String name, String vorName, LocalDate geburtsDatum) {
         ID = nextID;
@@ -21,6 +24,7 @@ public class Mitarbeiter implements Serializable {
         this.name = name;
         this.vorName = vorName;
         this.geburtsDatum = geburtsDatum;
+        this.abwesenheitHashMap = new HashMap<>();
     }
     public Mitarbeiter(Mitarbeiter mitarbeiter){
         ID = nextID;
@@ -29,6 +33,7 @@ public class Mitarbeiter implements Serializable {
         this.vorName = mitarbeiter.getVorName();
         this.geburtsDatum = mitarbeiter.geburtsDatum;
         this.dayList = mitarbeiter.getDayList();
+        this.abwesenheitHashMap = mitarbeiter.getAbwesenheitHashMap();
     }
 
 
@@ -54,6 +59,10 @@ public class Mitarbeiter implements Serializable {
 
     public String getName() {
         return name;
+    }
+
+    public HashMap<LocalDate, Abwesenheit> getAbwesenheitHashMap() {
+        return abwesenheitHashMap;
     }
 
     public String getVorName() {
